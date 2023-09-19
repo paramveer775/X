@@ -1,0 +1,32 @@
+// // schema.prisma
+
+// datasource db {
+//   provider = "postgresql"
+//   url = env("DATABASE_URL")
+// }
+
+// generator client {
+//   provider = "prisma-client-js"
+// }
+
+// model Tweets {
+//   id Int @id @default(autoincrement())
+//   text_message String?
+// }
+
+
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Tweets {
+  id Int @id @default(autoincrement())
+  text_message String?
+  image String?
+}
